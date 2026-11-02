@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matcha Home · кофейня-матчерия</title>
+<meta name="description" content="Розово-зелёная кофейня, где матчу взбивают при тебе. Восемь фирменных напитков, конструктор на 3360 сочетаний и витрина к восьми утра.">
+<meta name="theme-color" content="#F4CBD1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Matcha Home · кофейня-матчерия">
+<meta property="og:description" content="Матча на будни, десерт на выходные. Собери свою матчу слоями.">
+<meta property="og:image" content="https://qcoldic.github.io/matcha-home/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://qcoldic.github.io/matcha-home/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/prata-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<a class="skip" href="#menu">К меню</a>
+
+<!-- Мини-шапка: появляется, когда витрина ушла за экран -->
+<nav class="bar" aria-label="Разделы">
+  <a class="bar__mark" href="#top" aria-label="Наверх">MH</a>
+  <a href="#menu">Меню</a>
+  <a href="#build">Собрать</a>
+  <a href="#visit">Адрес</a>
+</nav>
+
+<!-- ===== Витрина: вывеска, маркиза, окно ===== -->
+<header class="shop" id="top">
+  <div class="sign">
+    <p class="sign__kicker">кофейня-матчерия</p>
+    <h1 class="sign__mark">
+      <span class="sign__big">Matcha</span>
+      <span class="sign__small"><i aria-hidden="true"></i>home<i aria-hidden="true"></i></span>
+    </h1>
+    <p class="sign__est">est. 2026</p>
+  </div>
+
+  <div class="awning" aria-hidden="true">
+    <div class="awning__roof"></div>
+    <div class="awning__valance"></div>
+  </div>
+
+  <div class="window">
+    <div class="window__glass">
+      <p class="decal" aria-label="Матча на будни, десерт на выходные">
+        <span>Матча</span><span>на</span><span>будни</span>
+        <span>Десерт</span><span>на</span><span>выходные</span>
+      </p>
+
+      <div class="sill" aria-hidden="true">
+        <svg class="cup cup--sill" data-recipe="base=rose&milk=cow&shots=2&top=cloud&bow=1"></svg>
+        <svg class="cup cup--sill cup--hero" data-recipe="base=strawberry&milk=cow&shots=2&top=none&berry=1"></svg>
+        <svg class="cup cup--sill" data-recipe="base=none&milk=tonic&shots=2&top=none"></svg>
+      </div>
+
+      <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="badge-ring" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+        <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width=".8"/>
+        <text><textPath href="#badge-ring" startOffset="0" textLength="272" lengthAdjust="spacing">MATCHA · HOME · EST 2026 · MATCHA · HOME ·</textPath></text>
+        <path d="M60 44c-9 7-10 20 0 32 10-12 9-25 0-32Zm0 4v26" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="window__mullion" aria-hidden="true"></span>
+  </div>
+
+  <div class="street">
+    <p class="street__lead">Восемь фирменных матч, конструктор на&nbsp;3360 сочетаний и&nbsp;витрина свежей выпечки к&nbsp;восьми утра.</p>
+    <div class="street__cta">
+      <a class="btn btn--olive" href="#menu">Смотреть меню</a>
+      <a class="btn btn--pink" href="#build">Собрать свою</a>
+    </div>
+    <svg class="chairs" viewBox="0 0 168 86" aria-hidden="true">
+      <g id="chair">
+        <path class="c-fill" d="M6 10a18 18 0 0 1 36 0v34H6Z"/>
+        <path class="c-line" d="M13 6v38M20 3v41M27 3v41M34 6v38"/>
+        <rect class="c-fill" x="2" y="44" width="44" height="6" rx="3"/>
+        <path class="c-leg" d="M8 50 4 84M40 50l4 34M10 70h28"/>
+      </g>
+      <use href="#chair" x="60"/>
+      <use href="#chair" x="120"/>
+    </svg>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Меню: планшет Ceremonial Matcha Series ===== -->
+<section class="series" id="menu" aria-labelledby="menu-title">
+  <div class="board reveal">
+    <div class="board__clip" aria-hidden="true"><span></span></div>
+
+    <header class="board__head">
+      <svg class="bow" viewBox="0 0 80 44" aria-hidden="true"><use href="#bow-shape"/></svg>
+      <h2 class="board__title" id="menu-title">Ceremonial<br>Matcha Series</h2>
+      <p class="board__sub">Церемониальная серия. Каждую взбиваем отдельно, под твой стакан.</p>
+    </header>
+
+    <ul class="drinks">
+      <li class="drink" data-recipe="base=strawberry&milk=cow&shots=2&top=none&berry=0">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Клубничная матча</h3>
+          <p>Клубничное пюре, молоко, два шота</p>
+          <span class="price">390&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+      <li class="drink" data-recipe="base=rose&milk=cow&shots=2&top=cloud&bow=1">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Розовое облако</h3>
+          <p>Розовый сироп, матча, сливочная шапка</p>
+          <span class="price">450&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+      <li class="drink" data-recipe="base=none&milk=cow&shots=2&top=cloud">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Матча-эйншпеннер</h3>
+          <p>Чистая матча под плотными сливками</p>
+          <span class="price">410&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+      <li class="drink" data-recipe="base=none&milk=oat&shots=2&top=salt">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Солёные сливки</h3>
+          <p>Овсяное молоко, щепоть морской соли</p>
+          <span class="price">450&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+      <li class="drink" data-recipe="base=mango&milk=coconut&shots=2&top=none">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Манго-кокос</h3>
+          <p>Манго внизу, кокосовое молоко, матча</p>
+          <span class="price">440&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+      <li class="drink" data-recipe="base=none&milk=tonic&shots=2&top=none">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Матча-тоник</h3>
+          <p>Тоник со льдом, матча плавает сверху</p>
+          <span class="price">380&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+      <li class="drink" data-recipe="base=none&milk=cow&shots=3&top=none&dust=1">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Крепкая церемониальная</h3>
+          <p>Три шота и посыпка матчей сверху</p>
+          <span class="price">410&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+      <li class="drink" data-recipe="base=strawberry&milk=cow&shots=1&top=pink&bow=1&berry=1">
+        <svg class="cup cup--menu" aria-hidden="true"></svg>
+        <div class="drink__tag">
+          <h3>Самая розовая</h3>
+          <p>Клубника, клубничная пена и бантик</p>
+          <span class="price">420&nbsp;₽</span>
+        </div>
+        <button class="drink__try" type="button">Собрать такую</button>
+      </li>
+    </ul>
+
+    <p class="board__foot">Альтернативное молоко +40&nbsp;₽ · без сахара по умолчанию, сироп по просьбе</p>
+  </div>
+</section>
+
+<!-- ===== Конструктор: звезда шоу ===== -->
+<section class="build" id="build" aria-labelledby="build-title">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">конструктор</p>
+      <h2 id="build-title">Собери свою матчу</h2>
+      <p class="head__lead">Выбирай, стакан соберётся на глазах. Сочетаний 3360, мы попробовали не все.</p>
+    </header>
+
+    <div class="build__grid">
+      <div class="stage" aria-live="polite">
+        <div class="stage__scene">
+          <svg class="cup cup--stage" id="stage-cup" role="img" aria-label="Твоя матча"></svg>
+        </div>
+        <div class="stage__info">
+          <p class="stage__match" id="stage-match" hidden></p>
+          <h3 class="stage__name" id="stage-name">Клубничная матча</h3>
+          <p class="stage__line" id="stage-line">2 шота · коровье молоко · со льдом</p>
+          <div class="stage__row">
+            <span class="stage__price" id="stage-price">390&nbsp;₽</span>
+            <span class="stage__code" id="stage-code">MH-0000</span>
+          </div>
+          <button class="btn btn--olive btn--small" type="button" id="surprise">Удиви меня</button>
+        </div>
+        <div class="counter" aria-hidden="true"><div class="counter__top"></div><div class="counter__tiles"></div></div>
+      </div>
+
+      <form class="options" id="options" aria-label="Состав напитка">
+        <fieldset class="opt">
+          <legend>Основа</legend>
+          <label class="chip"><input type="radio" name="base" value="none"><span>Без основы</span></label>
+          <label class="chip"><input type="radio" name="base" value="strawberry" checked><span>Клубника <small>+40</small></span></label>
+          <label class="chip"><input type="radio" name="base" value="rose"><span>Роза <small>+40</small></span></label>
+          <label class="chip"><input type="radio" name="base" value="mango"><span>Манго <small>+40</small></span></label>
+          <label class="chip"><input type="radio" name="base" value="blueberry"><span>Черника <small>+40</small></span></label>
+        </fieldset>
+
+        <fieldset class="opt">
+          <legend>Молоко</legend>
+          <label class="chip"><input type="radio" name="milk" value="cow" checked><span>Коровье</span></label>
+          <label class="chip"><input type="radio" name="milk" value="oat"><span>Овсяное <small>+40</small></span></label>
+          <label class="chip"><input type="radio" name="milk" value="coconut"><span>Кокосовое <small>+50</small></span></label>
+          <label class="chip"><input type="radio" name="milk" value="tonic"><span>Тоник <small>+30</small></span></label>
+        </fieldset>
+
+        <fieldset class="opt">
+          <legend>Сила матчи</legend>
+          <label class="chip"><input type="radio" name="shots" value="1"><span>Мягко · 1 шот</span></label>
+          <label class="chip"><input type="radio" name="shots" value="2" checked><span>Классика · 2 <small>+60</small></span></label>
+          <label class="chip"><input type="radio" name="shots" value="3"><span>Крепко · 3 <small>+120</small></span></label>
+        </fieldset>
+
+        <fieldset class="opt">
+          <legend>Сверху</legend>
+          <label class="chip"><input type="radio" name="top" value="none" checked><span>Ничего</span></label>
+          <label class="chip"><input type="radio" name="top" value="cloud"><span>Сливочное облако <small>+60</small></span></label>
+          <label class="chip"><input type="radio" name="top" value="salt"><span>Солёные сливки <small>+60</small></span></label>
+          <label class="chip"><input type="radio" name="top" value="pink"><span>Клубничная пена <small>+60</small></span></label>
+        </fieldset>
+
+        <fieldset class="opt">
+          <legend>Подача</legend>
+          <label class="chip"><input type="radio" name="temp" value="iced" checked><span>Со льдом</span></label>
+          <label class="chip"><input type="radio" name="temp" value="warm"><span>Тёплая</span></label>
+        </fieldset>
+
+        <fieldset class="opt">
+          <legend>Декор</legend>
+          <label class="chip"><input type="checkbox" name="bow" value="1"><span>Бантик</span></label>
+          <label class="chip"><input type="checkbox" name="berry" value="1"><span>Клубника на край <small>+30</small></span></label>
+          <label class="chip"><input type="checkbox" name="dust" value="1"><span>Посыпка матчей</span></label>
+        </fieldset>
+
+        <p class="options__note">Покажи этот экран на кассе, соберём точно такую.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ритуал: как делаем ===== -->
+<section class="ritual" id="ritual" aria-labelledby="ritual-title">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">ритуал</p>
+      <h2 id="ritual-title">Дом, где матчу взбивают при&nbsp;тебе</h2>
+      <p class="head__lead">Никаких порошков из пакета. Церемониальная матча из Удзи, сито, вода на 80 градусов и&nbsp;бамбуковый венчик.</p>
+    </header>
+
+    <figure class="ritual__art reveal">
+      <svg viewBox="0 0 360 320" role="img" aria-label="Розовая чаша со взбитой матчей, бамбуковый венчик, ложка и банка матчи">
+        <defs>
+          <radialGradient id="foam" cx="46%" cy="40%" r="62%">
+            <stop offset="0" stop-color="#BBD674"/><stop offset=".7" stop-color="#9CBF52"/><stop offset="1" stop-color="#86A944"/>
+          </radialGradient>
+          <linearGradient id="bowl" x1="0" x2="1">
+            <stop offset="0" stop-color="#E99FAD"/><stop offset=".35" stop-color="#F6C3CB"/><stop offset="1" stop-color="#E295A3"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 320V150a156 156 0 0 1 312 0v170Z" fill="#F7D3D9"/>
+        <ellipse cx="180" cy="292" rx="160" ry="14" fill="rgba(46,58,28,.12)"/>
+
+        <!-- банка матчи -->
+        <g transform="translate(34 196)">
+          <rect width="50" height="88" rx="6" fill="#6C7C40"/>
+          <rect y="-10" width="50" height="16" rx="4" fill="#56652F"/>
+          <rect y="30" width="50" height="26" fill="#F4CBD1"/>
+          <text x="25" y="47.5" text-anchor="middle" class="art-label">MATCHA</text>
+        </g>
+
+        <!-- чаша -->
+        <rect x="146" y="270" width="68" height="14" rx="4" fill="#D98B99"/>
+        <path d="M82 170C82 240 120 274 180 274S278 240 278 170Z" fill="url(#bowl)" stroke="#C76E82" stroke-width="2"/>
+        <path d="M92 196c26 10 150 10 176 0" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="180" cy="170" rx="98" ry="20" fill="url(#foam)" stroke="#C76E82" stroke-width="2"/>
+        <g fill="rgba(255,255,255,.55)">
+          <circle cx="150" cy="166" r="2.2"/><circle cx="172" cy="162" r="1.6"/><circle cx="196" cy="168" r="2"/>
+          <circle cx="214" cy="163" r="1.4"/><circle cx="134" cy="172" r="1.4"/><circle cx="182" cy="175" r="1.8"/>
+          <circle cx="230" cy="171" r="1.6"/><circle cx="160" cy="176" r="1.2"/><circle cx="205" cy="177" r="1.2"/>
+        </g>
+
+        <!-- венчик часэн -->
+        <g transform="translate(288 118)">
+          <rect x="-8" y="0" width="16" height="74" rx="7" fill="#D8B878" stroke="#B8955A" stroke-width="1.5"/>
+          <path d="M-8 30h16" stroke="#B8955A" stroke-width="1.5"/>
+          <path d="M-9 74C-30 104-26 140 0 146 26 140 30 104 9 74Z" fill="#F0E3C4" stroke="#C9AE76" stroke-width="1.5"/>
+          <path d="M-5 78c-12 26-10 50-2 64M0 78v66M5 78c12 26 10 50 2 64M-8 80c-16 22-16 46-10 58M8 80c16 22 16 46 10 58" fill="none" stroke="#C9AE76" stroke-width="1.2"/>
+        </g>
+
+        <!-- ложка часяку с горкой матчи -->
+        <path d="M44 300C90 296 140 290 196 296" fill="none" stroke="#C9A262" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="190" cy="294" rx="9" ry="4" fill="#9CBF52"/>
+      </svg>
+    </figure>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__n">1</span>
+        <h3>Просеиваем</h3>
+        <p>Два грамма матчи через сито. Так не будет комочков, и&nbsp;вкус раскроется ровно.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">2</span>
+        <h3>80 градусов</h3>
+        <p>Кипяток делает матчу горькой. Наш чайник держит температуру сам и&nbsp;не даёт ошибиться.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">3</span>
+        <h3>Взбиваем</h3>
+        <p>Венчиком часэн, тридцать секунд зигзагом, пока сверху не появится мелкая пена.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">4</span>
+        <h3>Наливаем слоями</h3>
+        <p>Медленно, на холодное молоко и&nbsp;лёд. Первые секунды зелёный висит сверху, лучший момент для фото.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Место ===== -->
+<section class="place" id="place" aria-labelledby="place-title">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">место</p>
+      <h2 id="place-title">Розовая плитка, зелёная столешница</h2>
+      <p class="head__lead">Пятнадцать мест, арки с посудой и&nbsp;три розовых стула у входа для тех, кто ждёт подругу.</p>
+    </header>
+  </div>
+
+  <figure class="room reveal">
+    <svg viewBox="0 0 360 470" role="img" aria-label="Зал кофейни: зелёные арки с полками, лампы, плющ, стойка из розовой плитки с зелёной столешницей и стеклянная витрина с круассанами">
+      <defs>
+        <linearGradient id="tile" x1="0" x2="1">
+          <stop offset="0" stop-color="#E59AA4"/><stop offset=".4" stop-color="#F2BAC1"/><stop offset="1" stop-color="#E295A0"/>
+        </linearGradient>
+        <pattern id="tiles" width="16" height="36" patternUnits="userSpaceOnUse">
+          <rect width="16" height="36" fill="#FFF4F2"/>
+          <rect width="14.6" height="34.6" rx="1.4" fill="url(#tile)"/>
+        </pattern>
+        <radialGradient id="glow"><stop offset="0" stop-color="#FFF6E8" stop-opacity=".75"/><stop offset="1" stop-color="#FFF6E8" stop-opacity="0"/></radialGradient>
+        <g id="croissant">
+          <path d="M0 12C2 2 34-4 44 9 36 16 8 18 0 12Z" fill="#D9A257" stroke="#B57A35" stroke-width="1.2"/>
+          <path d="M11 4c3 4 3 9 1 12M22 2c2 5 2 11 0 15M33 4c2 4 1 9-2 11" fill="none" stroke="#B57A35" stroke-width="1.1"/>
+        </g>
+        <g id="cupstack">
+          <path d="M0 0h26l-3 22H3Z"/><path d="M0 -10h26l-3 22H3Z" opacity=".92"/><path d="M0 -20h26l-3 22H3Z" opacity=".86"/>
+          <path d="M0 -30h26l-3 22H3Z" opacity=".8"/><rect x="-2" y="-36" width="30" height="7" rx="3"/>
+        </g>
+        <g id="shelfcup"><path d="M0 0h16l-2 14H2Z"/><path d="M16 4c5 0 5 7 0 7" fill="none" stroke-width="2"/></g>
+      </defs>
+
+      <rect width="360" height="470" fill="#F7D6DA"/>
+
+      <!-- лампы -->
+      <circle cx="112" cy="66" r="62" fill="url(#glow)"/>
+      <circle cx="252" cy="58" r="56" fill="url(#glow)"/>
+
+      <!-- зелёная панель с арками -->
+      <rect x="16" y="70" width="328" height="244" rx="6" fill="#B6C9A2"/>
+      <path d="M36 300V150a58 58 0 0 1 116 0v150Z" fill="#F1C5CC"/>
+      <path d="M208 300V150a58 58 0 0 1 116 0v150Z" fill="#F1C5CC"/>
+      <path d="M36 300V150a58 58 0 0 1 116 0v150M208 300V150a58 58 0 0 1 116 0v150" fill="none" stroke="#9DB289" stroke-width="3"/>
+      <rect x="36" y="196" width="116" height="6" fill="#9DB289"/><rect x="208" y="196" width="116" height="6" fill="#9DB289"/>
+      <rect x="36" y="254" width="116" height="6" fill="#9DB289"/><rect x="208" y="254" width="116" height="6" fill="#9DB289"/>
+
+      <!-- полки: чашки, банки, миски -->
+      <g fill="#EFA3B2" stroke="#C76E82" stroke-width="1"><use href="#shelfcup" x="52" y="182"/><use href="#shelfcup" x="104" y="182"/><use href="#shelfcup" x="226" y="182"/></g>
+      <g fill="#8FA56B" stroke="#6C7C40" stroke-width="1"><use href="#shelfcup" x="78" y="182"/><use href="#shelfcup" x="252" y="182"/><use href="#shelfcup" x="278" y="182"/></g>
+      <g fill="#6C7C40"><rect x="56" y="228" width="18" height="26" rx="3"/><rect x="78" y="228" width="18" height="26" rx="3"/><rect x="232" y="230" width="18" height="24" rx="3"/></g>
+      <g fill="#F4CBD1"><rect x="56" y="236" width="18" height="8"/><rect x="78" y="236" width="18" height="8"/><rect x="232" y="237" width="18" height="8"/></g>
+      <g fill="rgba(255,255,255,.65)" stroke="rgba(255,255,255,.95)"><rect x="110" y="226" width="22" height="28" rx="6"/><rect x="262" y="230" width="20" height="24" rx="6"/><rect x="288" y="222" width="22" height="32" rx="6"/></g>
+      <g fill="#9CBF52"><rect x="112" y="240" width="18" height="12" rx="3"/><rect x="290" y="236" width="18" height="16" rx="3"/></g>
+
+      <!-- провода и абажуры -->
+      <path d="M112 0v44M252 0v36" stroke="#8B8478" stroke-width="1.2"/>
+      <path d="M94 62a18 18 0 0 1 36 0Z" fill="#FFFAF3" stroke="#E7D9C8"/>
+      <path d="M236 54a16 16 0 0 1 32 0Z" fill="#FFFAF3" stroke="#E7D9C8"/>
+
+      <!-- плющ сверху панели -->
+      <path d="M300 72c8 30-14 46-4 78s-10 52-2 84" fill="none" stroke="#5F8A3A" stroke-width="2"/>
+      <g fill="#6F9A45">
+        <ellipse cx="292" cy="86" rx="9" ry="6" transform="rotate(-30 292 86)"/><ellipse cx="310" cy="104" rx="9" ry="6" transform="rotate(30 310 104)"/>
+        <ellipse cx="290" cy="126" rx="9" ry="6" transform="rotate(-40 290 126)"/><ellipse cx="306" cy="150" rx="9" ry="6" transform="rotate(25 306 150)"/>
+        <ellipse cx="288" cy="176" rx="8" ry="5.5" transform="rotate(-35 288 176)"/><ellipse cx="302" cy="204" rx="8" ry="5.5" transform="rotate(30 302 204)"/>
+        <ellipse cx="290" cy="228" rx="7" ry="5" transform="rotate(-30 290 228)"/>
+      </g>
+      <g fill="#8DB35A">
+        <ellipse cx="318" cy="80" rx="8" ry="5.5" transform="rotate(20 318 80)"/><ellipse cx="282" cy="104" rx="7" ry="5" transform="rotate(-20 282 104)"/>
+        <ellipse cx="312" cy="128" rx="7" ry="5" transform="rotate(35 312 128)"/><ellipse cx="294" cy="160" rx="7" ry="5" transform="rotate(-25 294 160)"/>
+      </g>
+
+      <!-- стаканы с собой и ваза -->
+      <g fill="#F2B3BE" stroke="#C76E82" stroke-width="1"><use href="#cupstack" x="26" y="314"/><use href="#cupstack" x="88" y="314"/></g>
+      <g fill="#8FA56B" stroke="#56652F" stroke-width="1"><use href="#cupstack" x="57" y="314"/></g>
+      <path d="M130 292c-2-22 4-40 10-54M136 292c4-20 12-34 20-44M128 292c-8-18-14-28-22-34" fill="none" stroke="#B7A17E" stroke-width="1.2"/>
+      <g fill="#F0B5C0"><circle cx="140" cy="236" r="5"/><circle cx="156" cy="246" r="4.5"/><circle cx="106" cy="256" r="4.5"/><circle cx="146" cy="228" r="3.5"/><circle cx="112" cy="250" r="3"/></g>
+      <path d="M122 292h20l-2 28h-16Z" fill="#FFFDF8" stroke="#E2D6C8"/>
+
+      <!-- витрина -->
+      <rect x="166" y="230" width="178" height="92" rx="3" fill="rgba(255,255,255,.22)" stroke="rgba(255,255,255,.95)" stroke-width="2"/>
+      <path d="M168 280h174" stroke="rgba(255,255,255,.9)" stroke-width="2"/>
+      <use href="#croissant" x="176" y="302"/>
+      <use href="#croissant" x="226" y="304"/>
+      <g><use href="#croissant" x="280" y="302"/><g fill="#8DB045"><circle cx="294" cy="308" r="1.6"/><circle cx="302" cy="306" r="1.4"/><circle cx="310" cy="309" r="1.6"/></g></g>
+      <g transform="translate(186 250)"><path d="M0 26 22 0l22 26Z" fill="#F4E2C6"/><path d="M0 26 22 0l22 26" fill="none" stroke="#D9A257" stroke-width="1"/><path d="M4 21h36M8 16h28" stroke="#E7835B" stroke-width="3"/></g>
+      <g transform="translate(262 256)"><ellipse cx="22" cy="14" rx="22" ry="7" fill="#E2B26C"/><ellipse cx="22" cy="11" rx="19" ry="5" fill="#E8697F"/><circle cx="16" cy="10" r="2.4" fill="#C9354D"/><circle cx="26" cy="9" r="2.4" fill="#C9354D"/></g>
+      <g class="glass-label">
+        <text x="186" y="244" transform="rotate(-3 186 244)">морковный</text>
+        <text x="272" y="245" transform="rotate(3 272 245)">клубничный</text>
+        <text x="182" y="295" transform="rotate(-3 182 295)">круассан</text>
+        <text x="280" y="295" transform="rotate(2 280 295)">фисташка</text>
+      </g>
+      <path d="M174 236l22 82M304 236l16 64" stroke="rgba(255,255,255,.3)" stroke-width="5"/>
+
+      <!-- столешница цвета шалфея и плитка -->
+      <rect x="0" y="322" width="360" height="12" fill="#B4C7A0"/>
+      <rect x="0" y="332" width="360" height="6" fill="#93A97F"/>
+      <rect x="0" y="338" width="360" height="132" fill="url(#tiles)"/>
+      <rect x="0" y="338" width="360" height="14" fill="rgba(46,58,28,.12)"/>
+    </svg>
+    <figcaption>Глянцевая плитка ручной глазури, столешница цвета шалфея и&nbsp;витрина, которую собираем к&nbsp;восьми утра.</figcaption>
+  </figure>
+</section>
+
+<!-- ===== Витрина и доска ===== -->
+<section class="extras" id="extras" aria-labelledby="extras-title">
+  <div class="wrap extras__grid">
+    <div class="case reveal">
+      <p class="eyebrow">витрина</p>
+      <h2 id="extras-title">К матче</h2>
+      <ul class="case__list">
+        <li><span>Фисташковый круассан</span><b>290&nbsp;₽</b></li>
+        <li><span>Круассан с&nbsp;матча-кремом</span><b>320&nbsp;₽</b></li>
+        <li><span>Морковный торт</span><b>350&nbsp;₽</b></li>
+        <li><span>Баскский чизкейк с&nbsp;матчей</span><b>380&nbsp;₽</b></li>
+        <li><span>Клубничный тарт</span><b>340&nbsp;₽</b></li>
+        <li><span>Сэндвич с&nbsp;яйцом и&nbsp;авокадо <small>до 12:00</small></span><b>420&nbsp;₽</b></li>
+      </ul>
+      <p class="case__note">Витрину собираем к&nbsp;восьми. Круассаны обычно заканчиваются к&nbsp;обеду.</p>
+    </div>
+
+    <div class="letterboard reveal" role="group" aria-label="Не только матча: кофе и другие напитки">
+      <p class="letterboard__title">Не только матча</p>
+      <ul class="letterboard__list">
+        <li><span>эспрессо</span><span>180</span></li>
+        <li><span>американо</span><span>210</span></li>
+        <li><span>капучино</span><span>260</span></li>
+        <li><span>латте</span><span>280</span></li>
+        <li><span>раф лаванда</span><span>340</span></li>
+        <li><span>хоуджича латте</span><span>330</span></li>
+        <li><span>какао маршмеллоу</span><span>320</span></li>
+        <li><span>розовый лимонад</span><span>290</span></li>
+        <li><span>жасминовый чай</span><span>250</span></li>
+        <li class="letterboard__star"><span>✱ овсяное молоко</span><span>+40</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Приходи ===== -->
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap visit__grid reveal">
+    <div>
+      <p class="eyebrow">адрес</p>
+      <h2 id="visit-title">Приходи домой</h2>
+      <p class="visit__addr">Цветочный переулок, 7</p>
+      <p class="visit__hint">Розовый фасад и&nbsp;полосатая маркиза, мимо не&nbsp;пройдёшь.</p>
+    </div>
+    <dl class="hours">
+      <div><dt>Пн–Пт</dt><dd>8:00–21:00</dd></div>
+      <div><dt>Сб–Вс</dt><dd>9:00–22:00</dd></div>
+      <div class="hours__now"><dt>Сейчас</dt><dd id="now-status">открыто</dd></div>
+      <div><dt>Wi-Fi</dt><dd>matcha_home, пароль на&nbsp;чеке</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__awning" aria-hidden="true"></div>
+  <div class="wrap foot__inner">
+    <p class="foot__mark">Matcha <span>home</span></p>
+    <p class="foot__small">Кофейня выдуманная, сайт настоящий. Концепт и&nbsp;сайт: Алекс, 2026</p>
+  </div>
+</footer>
+
+<!-- Общие формы: бантик -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="bow-shape">
+      <path class="b-loop" d="M40 22C30 8 10 2 6 10s8 20 34 12Z"/>
+      <path class="b-loop" d="M40 22C50 8 70 2 74 10s-8 20-34 12Z"/>
+      <path class="b-tail" d="M37 24 28 42M43 24l9 18"/>
+      <ellipse class="b-knot" cx="40" cy="22" rx="5" ry="5.6"/>
+    </g>
+  </defs>
+</svg>
+
+<script src="main.js" defer></script>
+</body>
+</html>
